@@ -39,9 +39,6 @@ public class BankAccount {
     }
 
     public void transfer(BankAccount target, int amount) {
-        // TODO: Safely make the changes
-        // HINT: Both accounts need to be locked, while the changes are being made
-        // HINT: Be cautious of potential deadlocks.
         if(target.getId() < this.getId())
         {
             lock.lock();
